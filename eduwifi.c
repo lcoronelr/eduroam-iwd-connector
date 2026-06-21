@@ -84,11 +84,12 @@ void get_password(char *password, size_t size) {
 }
 
 // Function to write eduroam credentials to /var/lib/iwd/
-void write_eduroam_config(const char *username, const char *password) {
-    const char *filename = "/var/lib/iwd/eduroam.8021x";
+void write_eduroam_config(const char *username, const char *password, const char *ssid) {
+    char filename[256];
+    snprintf(filename, sizeof(filename), "/var/lib/iwd/%s.8021x", ssid);
     FILE *file = fopen(filename, "w");
     if (file == NULL) {
-        perror("Failed to open /var/lib/iwd/eduroam.8021x");
+        perror(filename);
         exit(EXIT_FAILURE);
     }
 
@@ -126,6 +127,7 @@ void change_mac_address(const char *interface) {
 }
 
 int main() {
+    char ssid[128];
     char username[128];
     char password[128];
     const char *interface = "wlan0";  // Change this if your interface is different
@@ -133,8 +135,12 @@ int main() {
     // Display menu and get user choice
     int choice = display_menu();
 
+    printf("Enter your network name default (SSID) [default: eduroam]: ");
+    scanf("%127s", ssid);
+    getchar();  // Consume newline left by scanf
+
     // Ask for credentials
-    printf("Enter your eduroam username: ");
+    printf("Enter your network username: ");
     scanf("%127s", username);
     getchar();  // Consume newline left by scanf
 
@@ -146,7 +152,7 @@ int main() {
     }
 
     // Write Wi-Fi credentials to iwd config
-    write_eduroam_config(username, password);
+    write_eduroam_config(username, password, ssid);
 
     // Print step-by-step instructions
     printf("\nWi-Fi credentials saved successfully.\n");
