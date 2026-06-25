@@ -49,10 +49,10 @@ sudo eduwifi
 Use the **arrow keys** to navigate and **press Enter** to select an option.
 
 ## Entering Credentials
-
+- Enter your **network ssid** (e.g., `eduroam-5Ghz`).  
 - Enter your **eduroam username** (e.g., `yourname@university.edu`).  
 - Enter your **Wi-Fi password** (input is hidden for security).  
-- Eduwifi securely saves your credentials in `/var/lib/iwd/eduroam.8021x`.  
+- Eduwifi securely saves your credentials in `/var/lib/iwd/{SSID}.8021x`.  
 
 ## Manually Connecting to Eduroam
 
