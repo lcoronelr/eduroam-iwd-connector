@@ -20,7 +20,7 @@
 <text x="20" y="330"><tspan>EAP-Method=TLS</tspan></text>
 <text x="20" y="350"><tspan>EAP-Identity=jdoe@university.edu</tspan></text>
 <text x="20" y="370"><tspan>EAP-TLS-CACert=/home/you/Downloads/ca.pem</tspan></text>
-<text x="20" y="390"><tspan>EAP-TLS-ClientCert=/home/you/Downloads/jdoe.p12</tspan></text>
+<text x="20" y="390"><tspan>EAP-TLS-ClientKeyBundle=/home/you/Downloads/jdoe.p12</tspan></text>
 <text x="20" y="410"><tspan>EAP-TLS-ClientKeyPassphrase=********</tspan></text>
 <text x="20" y="430"></text>
 <text x="20" y="450"><tspan>[Settings]</tspan></text>
