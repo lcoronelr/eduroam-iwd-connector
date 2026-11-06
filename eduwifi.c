@@ -308,8 +308,13 @@ void write_eduroam_config(const struct eap_config *cfg) {
     write_setting(file, key, cfg->server_domain);
 
     if (cfg->method == METHOD_TLS) {
-        write_setting(file, "EAP-TLS-ClientCert", cfg->client_cert);
-        write_setting(file, "EAP-TLS-ClientKey", cfg->client_key);
+        if (cfg->client_key[0] != '\0') {
+            write_setting(file, "EAP-TLS-ClientCert", cfg->client_cert);
+            write_setting(file, "EAP-TLS-ClientKey", cfg->client_key);
+        } else {
+            // Certificate and key in one file (e.g. the .p12 from CAT)
+            write_setting(file, "EAP-TLS-ClientKeyBundle", cfg->client_cert);
+        }
         write_secret(file, "EAP-TLS-ClientKeyPassphrase", cfg->key_passphrase);
     } else {
         snprintf(key, sizeof(key), "EAP-%s-Phase2-Method", method);
