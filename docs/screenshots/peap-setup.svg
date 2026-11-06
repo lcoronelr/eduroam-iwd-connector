@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="752" height="596" viewBox="0 0 752 596">
+<rect width="752" height="596" rx="10" fill="#1e1e2e"/>
+<path d="M0 10a10 10 0 0 1 10-10h732a10 10 0 0 1 10 10v22H0z" fill="#313244"/>
+<circle cx="18" cy="16" r="6" fill="#f38ba8"/><circle cx="38" cy="16" r="6" fill="#f9e2af"/><circle cx="58" cy="16" r="6" fill="#a6e3a1"/>
+<text x="376.0" y="21" fill="#a6adc8" font-size="12" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">sudo eduwifi</text>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace" font-size="14" fill="#cdd6f4" xml:space="preserve">
+<text x="20" y="70"><tspan>Network name (SSID) [eduroam]: </tspan></text>
+<text x="20" y="90"><tspan>Username (e.g. you@university.edu): jdoe</tspan></text>
+<text x="20" y="110"><tspan>  </tspan><tspan font-weight="bold" fill="#f9e2af">Warning:</tspan><tspan> &quot;jdoe&quot; has no realm (e.g. you@university.edu).</tspan></text>
+<text x="20" y="130"><tspan>  eduroam rejects identities without a realm with &quot;eapFail&quot;.</tspan></text>
+<text x="20" y="150"><tspan>  Use it anyway? [y/N]: n</tspan></text>
+<text x="20" y="170"><tspan>Username (e.g. you@university.edu): jdoe@university.edu</tspan></text>
+<text x="20" y="190"><tspan>Password: </tspan></text>
+<text x="20" y="210"><tspan fill="#7f849c">Some institutions want an anonymous outer identity such as anonymous@university.edu.</tspan></text>
+<text x="20" y="230"><tspan fill="#7f849c">Check your cat.eduroam.org profile; press Enter to reuse your username.</tspan></text>
+<text x="20" y="250"><tspan>Outer identity [jdoe@university.edu]: anonymous@university.edu</tspan></text>
+<text x="20" y="270"><tspan>CA certificate (full path, Enter to skip): ca.pem</tspan></text>
+<text x="20" y="290"><tspan>Server domain, e.g. radius.university.edu (Enter to skip): radius.university.edu</tspan></text>
+<text x="20" y="310"></text>
+<text x="20" y="330"><tspan font-weight="bold" fill="#ffffff">Dry run - this would be written to /var/lib/iwd/eduroam.8021x:</tspan></text>
+<text x="20" y="350"></text>
+<text x="20" y="370"><tspan>[Security]</tspan></text>
+<text x="20" y="390"><tspan>EAP-Method=PEAP</tspan></text>
+<text x="20" y="410"><tspan>EAP-Identity=anonymous@university.edu</tspan></text>
+<text x="20" y="430"><tspan>EAP-PEAP-CACert=/home/you/Downloads/ca.pem</tspan></text>
+<text x="20" y="450"><tspan>EAP-PEAP-ServerDomainMask=radius.university.edu</tspan></text>
+<text x="20" y="470"><tspan>EAP-PEAP-Phase2-Method=MSCHAPV2</tspan></text>
+<text x="20" y="490"><tspan>EAP-PEAP-Phase2-Identity=jdoe@university.edu</tspan></text>
+<text x="20" y="510"><tspan>EAP-PEAP-Phase2-Password=********</tspan></text>
+<text x="20" y="530"></text>
+<text x="20" y="550"><tspan>[Settings]</tspan></text>
+<text x="20" y="570"><tspan>Autoconnect=true</tspan></text>
+</g></svg>
